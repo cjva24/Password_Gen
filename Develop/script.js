@@ -9,6 +9,18 @@ function generatePassword() {
     return; // Exit function if length is invalid
   }
 
+  // Prompt user for character types to include
+  var includeLowercase = confirm("Include lowercase characters?");
+  var includeUppercase = confirm("Include uppercase characters?");
+  var includeNumeric = confirm("Include numeric characters?");
+  var includeSpecial = confirm("Include special characters?");
+
+   // Validate at least one character type is selected
+   if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+    alert("Please select at least one character type.");
+    return; // Exit function if no character type is selected
+  }
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
