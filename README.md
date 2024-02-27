@@ -1,6 +1,7 @@
 # Password Generator
 
-
+## About 
+as a developer I wanted to create a password generator using html, css, and javascript.
 
 ### User Story
 
@@ -25,4 +26,11 @@
 #### THEN a password is generated that matches the selected criteria
 #### WHEN the password is generated
 #### THEN the password is either displayed in an alert or written to the page
+
+## Deployment 
+https://github.com/cjva24/Password_Gen
+http://127.0.0.1:5501/Password_Gen/Develop/index.html
+
+
+![Capture](https://github.com/cjva24/Password_Gen/assets/142863226/d95ee46e-d5ea-4ba2-ad09-22e0add36739)
 
