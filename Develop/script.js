@@ -21,6 +21,28 @@ function generatePassword() {
     return; // Exit function if no character type is selected
   }
 
+  // Define character pools based on user selection
+  var lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+  var uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var numericChars = '0123456789';
+  var specialChars = '!@#$%^&*()-_=+';
+
+  var allChars = '';
+  if (includeLowercase) allChars += lowercaseChars;
+  if (includeUppercase) allChars += uppercaseChars;
+  if (includeNumeric) allChars += numericChars;
+  if (includeSpecial) allChars += specialChars;
+
+  // Generate password
+  var password = '';
+  for (var i = 0; i < length; i++) {
+    var randomIndex = Math.floor(Math.random() * allChars.length);
+    password += allChars[randomIndex];
+  }
+
+  return password;
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
